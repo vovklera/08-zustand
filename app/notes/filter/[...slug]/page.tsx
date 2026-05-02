@@ -19,7 +19,7 @@ export async function generateMetadata({params}: Props) : Promise<Metadata>{
         openGraph: {
             title: `Notes: ${category}`,
             description: `Notes filtered by ${category}`,
-            url: process.env.OG_APP_URL || `/notes/filter/${category}`,
+            url: `https://08-zustand-eight-bay.vercel.app/notes/filter/${category}`,
             siteName: 'NoteHub',
             images: [
                 {
