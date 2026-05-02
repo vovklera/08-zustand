@@ -28,8 +28,18 @@ export default function NoteForm() {
         }
     })
 
+    // const handleSubmit = (formData: FormData) => {
+    //     const values = Object.fromEntries(formData) as NoteFormData;
+    //     mutate(values);
+    // };
+
     const handleSubmit = (formData: FormData) => {
-        const values = Object.fromEntries(formData) as NoteFormData;
+        const values: NoteFormData = {
+            title: formData.get("title") as string,
+            content: formData.get("content") as string,
+            tag: formData.get("tag") as string,
+        };
+
         mutate(values);
     };
 
