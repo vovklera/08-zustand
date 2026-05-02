@@ -57,7 +57,6 @@ export default function NotesClient({tag}: {tag: string}) {
             </header>
             {isLoading && <Loader/>}
             {isError && <ErrorMessage/>}
-            {notes.length > 0 && (<NoteList notes={notes}/>)}
             {!isLoading && !isError && (
                 notes.length > 0 ? (
                     <NoteList notes={notes}/>

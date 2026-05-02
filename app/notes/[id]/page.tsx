@@ -18,6 +18,21 @@ export async function generateMetadata({params}: Props) : Promise<Metadata>{
     return {
         title : `Note: ${note.title}`,
         description: note.content.slice(0, 30),
+        openGraph: {
+            title: `Note: ${note.title}`,
+            description: note.content.slice(0, 30),
+            url: process.env.OG_APP_URL ||  `/notes/${id}`,
+            siteName: 'NoteHub',
+            images: [
+                {
+                    url: 'https://ac.goit.global/fullstack/react/og-meta.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'NoteHub',
+                },
+            ],
+            type: 'article',
+        }
     }
 }
 

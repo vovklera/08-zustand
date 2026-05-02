@@ -11,7 +11,7 @@ type NoteDraftStore = {
 const initialDraft: NoteFormData = {
     title: '',
     content: '',
-    tag: '',
+    tag: 'Todo',
 }
 
 export  const useNoteDraftStore = create<NoteDraftStore>()(
