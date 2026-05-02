@@ -1,9 +1,15 @@
 import css from "./LayoutNotes.module.css"
+import type {Metadata} from "next";
 
 type Props ={
     children: React.ReactNode;
     sidebar: React.ReactNode;
 }
+
+export const metadata: Metadata = {
+    title: "All notes",
+    description: "Your personal notes",
+};
 
 export default function FilterLayout({children, sidebar} : Props){
     return (
